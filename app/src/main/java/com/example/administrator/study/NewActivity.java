@@ -3,6 +3,8 @@ package com.example.administrator.study;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.widget.TextView;
 
 /**
  * Created by Administrator on 2017/12/17.
@@ -14,12 +16,18 @@ import android.support.annotation.Nullable;
  */
 public class NewActivity extends Activity
 {
+    private TextView tv;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //加载一个视图(xml文件)
         setContentView(R.layout.newactivity);
         System.out.println("onCreate");
+
+        //接受跳转的数据
+        tv=(TextView)findViewById(R.id.textView);
+        String val=getIntent().getStringExtra("name");
+        tv.setText(val);
     }
 
     @Override
@@ -57,5 +65,4 @@ public class NewActivity extends Activity
         super.onRestart();
         System.out.println("onRestart");
     }
-
 }

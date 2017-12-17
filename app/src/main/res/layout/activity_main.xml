@@ -7,12 +7,14 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="请输入要保存的电话号码"/>
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -21,12 +23,17 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:id="@+id/jump"
+            android:text="跳转"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
             android:text="保存"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:id="@+id/clear"
             android:text="清空"/>
     </LinearLayout>
 </LinearLayout>
