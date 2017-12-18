@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LinearLayout1"
     android:layout_width="fill_parent"
@@ -7,33 +8,90 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="用户名"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="请输入要保存的电话号码"/>
+        android:text="输入密码"
+        android:textSize="18sp" />
+
     <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
+        android:id="@+id/user_passward"
+        android:layout_width="316dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:text="邮箱"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/user_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="right">
+        android:gravity="right"
+        android:orientation="horizontal">
+
         <Button
+            android:id="@+id/bigger"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/jump"
-            android:text="跳转"/>
+            android:text="变大" />
+
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/smaller"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
+            android:text="缩小" />
+
+        <Button
             android:id="@+id/save"
-            android:text="保存"/>
-        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="保存" />
+
+        <Button
             android:id="@+id/clear"
-            android:text="清空"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清空" />
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        app:srcCompat="@android:drawable/btn_star" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
